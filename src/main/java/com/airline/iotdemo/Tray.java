@@ -20,7 +20,7 @@ public class Tray implements java.io.Serializable {
 	private java.util.Date spoilageDate;
 
 	@org.kie.api.definition.type.Label("Foods")
-	@org.kie.api.definition.type.Description("A tray.")
+	@org.kie.api.definition.type.Description("A collection of food items in the tray.")
 	private java.util.List<com.airline.iotdemo.Food> foods;
 
 	public Tray() {
