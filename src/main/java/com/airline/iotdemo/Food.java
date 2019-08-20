@@ -8,9 +8,17 @@ public class Food implements java.io.Serializable {
 
 	static final long serialVersionUID = 1L;
 
-	@org.kie.api.definition.type.Description(value = "Type of food.")
-	@org.kie.api.definition.type.Label(value = "Type")
+	@org.kie.api.definition.type.Label("Type")
+	@org.kie.api.definition.type.Description("Type of food.")
 	private java.lang.String type;
+
+	@org.kie.api.definition.type.Description(value = "Food is considered spoiled at higher temperatures.")
+	@org.kie.api.definition.type.Label(value = "Max Temperature")
+	private java.lang.Double maxTemperature;
+
+	@org.kie.api.definition.type.Description(value = "Food is considered frozen at lower temperatures.")
+	@org.kie.api.definition.type.Label(value = "Min Temperature")
+	private java.lang.Double minTemperature;
 
 	public Food() {
 	}
@@ -23,8 +31,27 @@ public class Food implements java.io.Serializable {
 		this.type = type;
 	}
 
-	public Food(java.lang.String type) {
+	public java.lang.Double getMaxTemperature() {
+		return this.maxTemperature;
+	}
+
+	public void setMaxTemperature(java.lang.Double maxTemperature) {
+		this.maxTemperature = maxTemperature;
+	}
+
+	public java.lang.Double getMinTemperature() {
+		return this.minTemperature;
+	}
+
+	public void setMinTemperature(java.lang.Double minTemperature) {
+		this.minTemperature = minTemperature;
+	}
+
+	public Food(java.lang.String type, java.lang.Double maxTemperature,
+			java.lang.Double minTemperature) {
 		this.type = type;
+		this.maxTemperature = maxTemperature;
+		this.minTemperature = minTemperature;
 	}
 
 }
