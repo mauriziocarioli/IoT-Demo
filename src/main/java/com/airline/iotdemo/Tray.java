@@ -10,14 +10,18 @@ public class Tray implements java.io.Serializable {
 
 	static final long serialVersionUID = 1L;
 
-	@org.kie.api.definition.type.Label(value = "Type")
+	@org.kie.api.definition.type.Label("Type")
 	private java.lang.String type;
-	@org.kie.api.definition.type.Description(value = "Date of preparation of the food.")
-	@org.kie.api.definition.type.Label(value = "Prepared Date")
+	@org.kie.api.definition.type.Label("Prepared Date")
+	@org.kie.api.definition.type.Description("Date of preparation of the food.")
 	private java.util.Date preparedDate;
-	@org.kie.api.definition.type.Description(value = "Date of spoilage of the food.")
-	@org.kie.api.definition.type.Label(value = "Spoilage Date")
+	@org.kie.api.definition.type.Label("Spoilage Date")
+	@org.kie.api.definition.type.Description("Date of spoilage of the food.")
 	private java.util.Date spoilageDate;
+
+	@org.kie.api.definition.type.Description(value = "A food item.")
+	@org.kie.api.definition.type.Label(value = "Foods")
+	private java.util.List<com.airline.iotdemo.Food> foods;
 
 	public Tray() {
 	}
@@ -46,11 +50,21 @@ public class Tray implements java.io.Serializable {
 		this.spoilageDate = spoilageDate;
 	}
 
+	public java.util.List<com.airline.iotdemo.Food> getFoods() {
+		return this.foods;
+	}
+
+	public void setFoods(java.util.List<com.airline.iotdemo.Food> foods) {
+		this.foods = foods;
+	}
+
 	public Tray(java.lang.String type, java.util.Date preparedDate,
-			java.util.Date spoilageDate) {
+			java.util.Date spoilageDate,
+			java.util.List<com.airline.iotdemo.Food> foods) {
 		this.type = type;
 		this.preparedDate = preparedDate;
 		this.spoilageDate = spoilageDate;
+		this.foods = foods;
 	}
 
 }
