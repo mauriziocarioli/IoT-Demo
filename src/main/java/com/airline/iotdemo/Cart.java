@@ -14,9 +14,18 @@ public class Cart implements java.io.Serializable {
 	@org.kie.api.definition.type.Description("Collection of food trays in the food cart")
 	private java.util.List<com.airline.iotdemo.Tray> trays;
 
-	@org.kie.api.definition.type.Description(value = "Type of cart.")
-	@org.kie.api.definition.type.Label(value = "Type")
+	@org.kie.api.definition.type.Label("Type")
+	@org.kie.api.definition.type.Description("Type of cart.")
 	private java.lang.String type;
+
+	@org.kie.api.definition.type.Label(value = "Latitude")
+	private java.lang.String latitude;
+
+	@org.kie.api.definition.type.Label(value = "Longitude")
+	private java.lang.String longitude;
+
+	@org.kie.api.definition.type.Label(value = "Temperature")
+	private java.lang.Double temperature;
 
 	public Cart() {
 	}
@@ -37,10 +46,38 @@ public class Cart implements java.io.Serializable {
 		this.type = type;
 	}
 
+	public java.lang.String getLatitude() {
+		return this.latitude;
+	}
+
+	public void setLatitude(java.lang.String latitude) {
+		this.latitude = latitude;
+	}
+
+	public java.lang.String getLongitude() {
+		return this.longitude;
+	}
+
+	public void setLongitude(java.lang.String longitude) {
+		this.longitude = longitude;
+	}
+
+	public java.lang.Double getTemperature() {
+		return this.temperature;
+	}
+
+	public void setTemperature(java.lang.Double temperature) {
+		this.temperature = temperature;
+	}
+
 	public Cart(java.util.List<com.airline.iotdemo.Tray> trays,
-			java.lang.String type) {
+			java.lang.String type, java.lang.String latitude,
+			java.lang.String longitude, java.lang.Double temperature) {
 		this.trays = trays;
 		this.type = type;
+		this.latitude = latitude;
+		this.longitude = longitude;
+		this.temperature = temperature;
 	}
 
 }
