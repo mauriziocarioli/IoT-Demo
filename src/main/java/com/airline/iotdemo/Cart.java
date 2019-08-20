@@ -10,9 +10,13 @@ public class Cart implements java.io.Serializable {
 
 	static final long serialVersionUID = 1L;
 
-	@org.kie.api.definition.type.Description(value = "Collection of food trays in the food cart")
-	@org.kie.api.definition.type.Label(value = "Trays")
+	@org.kie.api.definition.type.Label("Trays")
+	@org.kie.api.definition.type.Description("Collection of food trays in the food cart")
 	private java.util.List<com.airline.iotdemo.Tray> trays;
+
+	@org.kie.api.definition.type.Description(value = "Type of cart.")
+	@org.kie.api.definition.type.Label(value = "Type")
+	private java.lang.String type;
 
 	public Cart() {
 	}
@@ -25,8 +29,18 @@ public class Cart implements java.io.Serializable {
 		this.trays = trays;
 	}
 
-	public Cart(java.util.List<com.airline.iotdemo.Tray> trays) {
+	public java.lang.String getType() {
+		return this.type;
+	}
+
+	public void setType(java.lang.String type) {
+		this.type = type;
+	}
+
+	public Cart(java.util.List<com.airline.iotdemo.Tray> trays,
+			java.lang.String type) {
 		this.trays = trays;
+		this.type = type;
 	}
 
 }
