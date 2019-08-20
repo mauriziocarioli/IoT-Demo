@@ -10,7 +10,47 @@ public class Tray implements java.io.Serializable {
 
 	static final long serialVersionUID = 1L;
 
+	@org.kie.api.definition.type.Label(value = "Type")
+	private java.lang.String type;
+	@org.kie.api.definition.type.Description(value = "Date of preparation of the food.")
+	@org.kie.api.definition.type.Label(value = "Prepared Date")
+	private java.util.Date preparedDate;
+	@org.kie.api.definition.type.Description(value = "Date of spoilage of the food.")
+	@org.kie.api.definition.type.Label(value = "Spoilage Date")
+	private java.util.Date spoilageDate;
+
 	public Tray() {
+	}
+
+	public java.lang.String getType() {
+		return this.type;
+	}
+
+	public void setType(java.lang.String type) {
+		this.type = type;
+	}
+
+	public java.util.Date getPreparedDate() {
+		return this.preparedDate;
+	}
+
+	public void setPreparedDate(java.util.Date preparedDate) {
+		this.preparedDate = preparedDate;
+	}
+
+	public java.util.Date getSpoilageDate() {
+		return this.spoilageDate;
+	}
+
+	public void setSpoilageDate(java.util.Date spoilageDate) {
+		this.spoilageDate = spoilageDate;
+	}
+
+	public Tray(java.lang.String type, java.util.Date preparedDate,
+			java.util.Date spoilageDate) {
+		this.type = type;
+		this.preparedDate = preparedDate;
+		this.spoilageDate = spoilageDate;
 	}
 
 }
