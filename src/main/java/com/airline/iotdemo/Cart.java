@@ -27,8 +27,8 @@ public class Cart implements java.io.Serializable {
 	@org.kie.api.definition.type.Label("Temperature")
 	private java.lang.Double temperature;
 
-	@org.kie.api.definition.type.Description(value = "Cart ID")
-	@org.kie.api.definition.type.Label(value = "id")
+	@org.kie.api.definition.type.Label("ID")
+	@org.kie.api.definition.type.Description("Cart ID")
 	private java.lang.String id;
 
 	public Cart() {
