@@ -18,14 +18,18 @@ public class Cart implements java.io.Serializable {
 	@org.kie.api.definition.type.Description("Type of cart.")
 	private java.lang.String type;
 
-	@org.kie.api.definition.type.Label(value = "Latitude")
+	@org.kie.api.definition.type.Label("Latitude")
 	private java.lang.String latitude;
 
-	@org.kie.api.definition.type.Label(value = "Longitude")
+	@org.kie.api.definition.type.Label("Longitude")
 	private java.lang.String longitude;
 
-	@org.kie.api.definition.type.Label(value = "Temperature")
+	@org.kie.api.definition.type.Label("Temperature")
 	private java.lang.Double temperature;
+
+	@org.kie.api.definition.type.Description(value = "Cart ID")
+	@org.kie.api.definition.type.Label(value = "id")
+	private java.lang.String id;
 
 	public Cart() {
 	}
@@ -70,14 +74,24 @@ public class Cart implements java.io.Serializable {
 		this.temperature = temperature;
 	}
 
+	public java.lang.String getId() {
+		return this.id;
+	}
+
+	public void setId(java.lang.String id) {
+		this.id = id;
+	}
+
 	public Cart(java.util.List<com.airline.iotdemo.Tray> trays,
 			java.lang.String type, java.lang.String latitude,
-			java.lang.String longitude, java.lang.Double temperature) {
+			java.lang.String longitude, java.lang.Double temperature,
+			java.lang.String id) {
 		this.trays = trays;
 		this.type = type;
 		this.latitude = latitude;
 		this.longitude = longitude;
 		this.temperature = temperature;
+		this.id = id;
 	}
 
 }
