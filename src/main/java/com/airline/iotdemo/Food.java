@@ -20,9 +20,13 @@ public class Food implements java.io.Serializable {
 	@org.kie.api.definition.type.Description("Food is considered frozen at lower temperatures.")
 	private java.lang.Double minTemperature;
 
-	@org.kie.api.definition.type.Description(value = "Name of the food.")
-	@org.kie.api.definition.type.Label(value = "Name")
+	@org.kie.api.definition.type.Description("Name of the food.")
+	@org.kie.api.definition.type.Label("Name")
 	private java.lang.String name;
+
+	@org.kie.api.definition.type.Description(value = "Food RFID")
+	@org.kie.api.definition.type.Label(value = "RFID")
+	private java.lang.String rfid;
 
 	public Food() {
 	}
@@ -59,12 +63,22 @@ public class Food implements java.io.Serializable {
 		this.name = name;
 	}
 
+	public java.lang.String getRfid() {
+		return this.rfid;
+	}
+
+	public void setRfid(java.lang.String rfid) {
+		this.rfid = rfid;
+	}
+
 	public Food(java.lang.String type, java.lang.Double maxTemperature,
-			java.lang.Double minTemperature, java.lang.String name) {
+			java.lang.Double minTemperature, java.lang.String name,
+			java.lang.String rfid) {
 		this.type = type;
 		this.maxTemperature = maxTemperature;
 		this.minTemperature = minTemperature;
 		this.name = name;
+		this.rfid = rfid;
 	}
 
 }
