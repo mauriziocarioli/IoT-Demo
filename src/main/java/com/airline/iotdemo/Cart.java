@@ -101,8 +101,7 @@ public class Cart implements java.io.Serializable {
 	}
 
 	public Cart(String id, Long timestamp, Double latitude, Double longitude,
-	        	Double temperature, 
-			String foodId, Integer status) {
+	        	Double temperature, String foodId, Integer status) {
 		this.latitude = latitude;
 		this.longitude = longitude;
 		this.temperature = temperature;
