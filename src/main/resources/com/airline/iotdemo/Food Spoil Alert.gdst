@@ -2,15 +2,103 @@
   <tableName>Food Spoil Alert</tableName>
   <rowNumberCol>
     <hideColumn>false</hideColumn>
-    <width>-1</width>
+    <width>50</width>
   </rowNumberCol>
   <descriptionCol>
     <hideColumn>false</hideColumn>
-    <width>-1</width>
+    <width>150</width>
   </descriptionCol>
   <metadataCols/>
   <attributeCols/>
-  <conditionPatterns/>
+  <conditionPatterns>
+    <Pattern52>
+      <factType>Cart</factType>
+      <boundName>$cart</boundName>
+      <isNegated>false</isNegated>
+      <conditions>
+        <condition-column52>
+          <typedDefaultValue>
+            <valueString></valueString>
+            <dataType>NUMERIC_DOUBLE</dataType>
+            <isOtherwise>false</isOtherwise>
+          </typedDefaultValue>
+          <hideColumn>false</hideColumn>
+          <width>100</width>
+          <header>Temp &gt;=</header>
+          <constraintValueType>1</constraintValueType>
+          <factField>temperature</factField>
+          <fieldType>Double</fieldType>
+          <operator>&gt;=</operator>
+          <parameters/>
+          <binding></binding>
+        </condition-column52>
+        <condition-column52>
+          <hideColumn>false</hideColumn>
+          <width>100</width>
+          <header>Latitude</header>
+          <constraintValueType>1</constraintValueType>
+          <factField>latitude</factField>
+          <fieldType>Double</fieldType>
+          <operator>!= null</operator>
+          <parameters/>
+          <binding>$lat</binding>
+        </condition-column52>
+        <condition-column52>
+          <hideColumn>false</hideColumn>
+          <width>100</width>
+          <header>Longitude</header>
+          <constraintValueType>1</constraintValueType>
+          <factField>longitude</factField>
+          <fieldType>Double</fieldType>
+          <operator>!= null</operator>
+          <parameters/>
+          <binding>$long</binding>
+        </condition-column52>
+        <condition-column52>
+          <hideColumn>false</hideColumn>
+          <width>100</width>
+          <header>Food RFID</header>
+          <constraintValueType>1</constraintValueType>
+          <factField>foodId</factField>
+          <fieldType>String</fieldType>
+          <operator>!= null</operator>
+          <parameters/>
+          <binding>$foodId</binding>
+        </condition-column52>
+      </conditions>
+      <window>
+        <parameters/>
+      </window>
+      <entryPointName></entryPointName>
+    </Pattern52>
+    <Pattern52>
+      <factType>Food</factType>
+      <boundName>$food</boundName>
+      <isNegated>false</isNegated>
+      <conditions>
+        <condition-column52>
+          <typedDefaultValue>
+            <valueString></valueString>
+            <dataType>STRING</dataType>
+            <isOtherwise>false</isOtherwise>
+          </typedDefaultValue>
+          <hideColumn>false</hideColumn>
+          <width>100</width>
+          <header>Food RFID 2</header>
+          <constraintValueType>3</constraintValueType>
+          <factField>rfid</factField>
+          <fieldType>String</fieldType>
+          <operator>==</operator>
+          <parameters/>
+          <binding></binding>
+        </condition-column52>
+      </conditions>
+      <window>
+        <parameters/>
+      </window>
+      <entryPointName></entryPointName>
+    </Pattern52>
+  </conditionPatterns>
   <actionCols/>
   <auditLog>
     <filter class="org.drools.guvnor.client.modeldriven.dt52.auditlog.DecisionTableAuditLogFilter">
