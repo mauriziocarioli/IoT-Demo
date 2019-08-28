@@ -65,6 +65,17 @@
           <parameters/>
           <binding>$foodId</binding>
         </condition-column52>
+        <condition-column52>
+          <hideColumn>false</hideColumn>
+          <width>100</width>
+          <header>Time</header>
+          <constraintValueType>1</constraintValueType>
+          <factField>timestamp</factField>
+          <fieldType>Long</fieldType>
+          <operator>!= null</operator>
+          <parameters/>
+          <binding>$time</binding>
+        </condition-column52>
       </conditions>
       <window>
         <parameters/>
@@ -92,6 +103,23 @@
           <parameters/>
           <binding></binding>
         </condition-column52>
+        <condition-column52>
+          <typedDefaultValue>
+            <valueString></valueString>
+            <dataType>STRING</dataType>
+            <isOtherwise>false</isOtherwise>
+          </typedDefaultValue>
+          <hideColumn>false</hideColumn>
+          <width>100</width>
+          <header>Food Type</header>
+          <constraintValueType>1</constraintValueType>
+          <factField>type</factField>
+          <fieldType>String</fieldType>
+          <operator>==</operator>
+          <valueList>1,2,3,4</valueList>
+          <parameters/>
+          <binding></binding>
+        </condition-column52>
       </conditions>
       <window>
         <parameters/>
@@ -99,7 +127,60 @@
       <entryPointName></entryPointName>
     </Pattern52>
   </conditionPatterns>
-  <actionCols/>
+  <actionCols>
+    <org.drools.workbench.models.guided.dtable.shared.model.BRLActionColumn>
+      <hideColumn>false</hideColumn>
+      <width>-1</width>
+      <header>Alert</header>
+      <definition>
+        <org.drools.workbench.models.datamodel.rule.ActionInsertFact>
+          <fieldValues/>
+          <factType>Alert</factType>
+          <boundName>$alert</boundName>
+          <isBound>true</isBound>
+        </org.drools.workbench.models.datamodel.rule.ActionInsertFact>
+      </definition>
+      <childColumns>
+        <org.drools.workbench.models.guided.dtable.shared.model.BRLActionVariableColumn>
+          <hideColumn>false</hideColumn>
+          <width>100</width>
+          <header>Alert</header>
+          <varName></varName>
+          <fieldType>Boolean</fieldType>
+        </org.drools.workbench.models.guided.dtable.shared.model.BRLActionVariableColumn>
+      </childColumns>
+    </org.drools.workbench.models.guided.dtable.shared.model.BRLActionColumn>
+    <insert-fact-column52>
+      <typedDefaultValue>
+        <valueString></valueString>
+        <dataType>STRING</dataType>
+        <isOtherwise>false</isOtherwise>
+      </typedDefaultValue>
+      <hideColumn>false</hideColumn>
+      <width>100</width>
+      <header>Source</header>
+      <factType>Alert</factType>
+      <boundName>$alert</boundName>
+      <factField>source</factField>
+      <type>String</type>
+      <isInsertLogical>false</isInsertLogical>
+    </insert-fact-column52>
+    <insert-fact-column52>
+      <typedDefaultValue>
+        <valueString></valueString>
+        <dataType>NUMERIC_LONG</dataType>
+        <isOtherwise>false</isOtherwise>
+      </typedDefaultValue>
+      <hideColumn>false</hideColumn>
+      <width>100</width>
+      <header>Time</header>
+      <factType>Alert</factType>
+      <boundName>$alert</boundName>
+      <factField>timestamp</factField>
+      <type>Long</type>
+      <isInsertLogical>false</isInsertLogical>
+    </insert-fact-column52>
+  </actionCols>
   <auditLog>
     <filter class="org.drools.guvnor.client.modeldriven.dt52.auditlog.DecisionTableAuditLogFilter">
       <acceptedTypes>
