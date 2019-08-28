@@ -33,7 +33,7 @@
           <binding></binding>
         </condition-column52>
         <condition-column52>
-          <hideColumn>false</hideColumn>
+          <hideColumn>true</hideColumn>
           <width>100</width>
           <header>Latitude</header>
           <constraintValueType>1</constraintValueType>
@@ -44,7 +44,7 @@
           <binding>$lat</binding>
         </condition-column52>
         <condition-column52>
-          <hideColumn>false</hideColumn>
+          <hideColumn>true</hideColumn>
           <width>100</width>
           <header>Longitude</header>
           <constraintValueType>1</constraintValueType>
@@ -55,7 +55,7 @@
           <binding>$long</binding>
         </condition-column52>
         <condition-column52>
-          <hideColumn>false</hideColumn>
+          <hideColumn>true</hideColumn>
           <width>100</width>
           <header>Food RFID</header>
           <constraintValueType>1</constraintValueType>
@@ -66,7 +66,7 @@
           <binding>$foodId</binding>
         </condition-column52>
         <condition-column52>
-          <hideColumn>false</hideColumn>
+          <hideColumn>true</hideColumn>
           <width>100</width>
           <header>Time</header>
           <constraintValueType>1</constraintValueType>
@@ -93,7 +93,7 @@
             <dataType>STRING</dataType>
             <isOtherwise>false</isOtherwise>
           </typedDefaultValue>
-          <hideColumn>false</hideColumn>
+          <hideColumn>true</hideColumn>
           <width>100</width>
           <header>Food RFID 2</header>
           <constraintValueType>3</constraintValueType>
@@ -129,7 +129,7 @@
   </conditionPatterns>
   <actionCols>
     <org.drools.workbench.models.guided.dtable.shared.model.BRLActionColumn>
-      <hideColumn>false</hideColumn>
+      <hideColumn>true</hideColumn>
       <width>-1</width>
       <header>Alert</header>
       <definition>
@@ -167,7 +167,7 @@
       </definition>
       <childColumns>
         <org.drools.workbench.models.guided.dtable.shared.model.BRLActionVariableColumn>
-          <hideColumn>false</hideColumn>
+          <hideColumn>true</hideColumn>
           <width>100</width>
           <header>Alert</header>
           <varName></varName>
