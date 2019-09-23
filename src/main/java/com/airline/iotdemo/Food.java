@@ -26,6 +26,11 @@ public class Food implements Serializable {
 	@Description(value = "Food name.")
 	private java.lang.String name;
 
+	@Label("STATUS")
+	@Description("Food Status")
+	private Integer status;
+
+
 	public Food() {
 	}
 
@@ -53,10 +58,19 @@ public class Food implements Serializable {
 		this.name = name;
 	}
 
-	public Food(String type, String rfid, String name) {
+	public Integer getStatus() {
+		return this.status;
+	}
+
+	public void setStatus(Integer status) {
+		this.status = status;
+	}
+
+	public Food(String type, String rfid, String name, String status) {
 		this.type = type;
 		this.rfid = rfid;
 		this.name = name;
+		this.status = status;
 	}
 
 }
