@@ -1,2 +1,2 @@
 'Food.type' : ['0=meat','1=vegetables','2=nonperishable','3=drinks']
-'Cart.status' : ['1=loaded','2=delivered','3=returned','4=spoiled','5=trashed']
+'Alert.status' : ['1=loaded','2=delivered','3=returned','4=spoiled','5=trashed']
