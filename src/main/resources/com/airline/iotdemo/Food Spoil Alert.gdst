@@ -197,7 +197,7 @@
         <isOtherwise>false</isOtherwise>
       </typedDefaultValue>
       <hideColumn>false</hideColumn>
-      <width>100</width>
+      <width>267</width>
       <header>Text</header>
       <factType>Alert</factType>
       <boundName>$alert</boundName>
@@ -217,6 +217,21 @@
       <factType>Alert</factType>
       <boundName>$alert</boundName>
       <factField>type</factField>
+      <type>String</type>
+      <isInsertLogical>false</isInsertLogical>
+    </insert-fact-column52>
+    <insert-fact-column52>
+      <typedDefaultValue>
+        <valueString></valueString>
+        <dataType>STRING</dataType>
+        <isOtherwise>false</isOtherwise>
+      </typedDefaultValue>
+      <hideColumn>false</hideColumn>
+      <width>100</width>
+      <header>Status</header>
+      <factType>Alert</factType>
+      <boundName>$alert</boundName>
+      <factField>status</factField>
       <type>String</type>
       <isInsertLogical>false</isInsertLogical>
     </insert-fact-column52>
@@ -357,7 +372,12 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>xyz</valueString>
+        <valueString>too hot: meat may spoil!</valueString>
+        <dataType>STRING</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueString>0</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
@@ -443,7 +463,12 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>rst</valueString>
+        <valueString>too hot: vegetables may spoil!</valueString>
+        <dataType>STRING</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueString>0</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
@@ -529,7 +554,12 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>abc</valueString>
+        <valueString>too hot: non perishable food may spool!</valueString>
+        <dataType>STRING</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueString>0</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
@@ -615,7 +645,12 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>123</valueString>
+        <valueString>too hot: drinks may spoil!</valueString>
+        <dataType>STRING</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueString>0</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
