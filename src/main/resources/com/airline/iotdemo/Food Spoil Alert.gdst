@@ -213,10 +213,10 @@
       </typedDefaultValue>
       <hideColumn>false</hideColumn>
       <width>100</width>
-      <header>Status</header>
+      <header>Type</header>
       <factType>Alert</factType>
       <boundName>$alert</boundName>
-      <factField>status</factField>
+      <factField>type</factField>
       <type>String</type>
       <isInsertLogical>false</isInsertLogical>
     </insert-fact-column52>
