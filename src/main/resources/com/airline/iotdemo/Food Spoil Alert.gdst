@@ -17,22 +17,6 @@
       <isNegated>false</isNegated>
       <conditions>
         <condition-column52>
-          <typedDefaultValue>
-            <valueString></valueString>
-            <dataType>NUMERIC_DOUBLE</dataType>
-            <isOtherwise>false</isOtherwise>
-          </typedDefaultValue>
-          <hideColumn>false</hideColumn>
-          <width>100</width>
-          <header>Temp &gt;=</header>
-          <constraintValueType>1</constraintValueType>
-          <factField>temperature</factField>
-          <fieldType>Double</fieldType>
-          <operator>&gt;=</operator>
-          <parameters/>
-          <binding></binding>
-        </condition-column52>
-        <condition-column52>
           <hideColumn>true</hideColumn>
           <width>100</width>
           <header>Latitude</header>
@@ -75,6 +59,38 @@
           <operator>!= null</operator>
           <parameters/>
           <binding>$time</binding>
+        </condition-column52>
+        <condition-column52>
+          <typedDefaultValue>
+            <valueString></valueString>
+            <dataType>NUMERIC_DOUBLE</dataType>
+            <isOtherwise>false</isOtherwise>
+          </typedDefaultValue>
+          <hideColumn>false</hideColumn>
+          <width>123</width>
+          <header>Temperature &gt;=</header>
+          <constraintValueType>1</constraintValueType>
+          <factField>temperature</factField>
+          <fieldType>Double</fieldType>
+          <operator>&gt;=</operator>
+          <parameters/>
+          <binding></binding>
+        </condition-column52>
+        <condition-column52>
+          <typedDefaultValue>
+            <valueString></valueString>
+            <dataType>NUMERIC_DOUBLE</dataType>
+            <isOtherwise>false</isOtherwise>
+          </typedDefaultValue>
+          <hideColumn>false</hideColumn>
+          <width>116</width>
+          <header>Temperature &lt;</header>
+          <constraintValueType>1</constraintValueType>
+          <factField>temperature</factField>
+          <fieldType>Double</fieldType>
+          <operator>&lt;</operator>
+          <parameters/>
+          <binding></binding>
         </condition-column52>
       </conditions>
       <window>
@@ -128,9 +144,9 @@
   </conditionPatterns>
   <actionCols>
     <org.drools.workbench.models.guided.dtable.shared.model.BRLActionColumn>
-      <hideColumn>true</hideColumn>
+      <hideColumn>false</hideColumn>
       <width>-1</width>
-      <header>Alert</header>
+      <header>Create Alert</header>
       <definition>
         <org.drools.workbench.models.datamodel.rule.ActionInsertFact>
           <fieldValues>
@@ -166,9 +182,9 @@
       </definition>
       <childColumns>
         <org.drools.workbench.models.guided.dtable.shared.model.BRLActionVariableColumn>
-          <hideColumn>true</hideColumn>
+          <hideColumn>false</hideColumn>
           <width>100</width>
-          <header>Alert</header>
+          <header>Create Alert</header>
           <varName></varName>
           <fieldType>Boolean</fieldType>
         </org.drools.workbench.models.guided.dtable.shared.model.BRLActionVariableColumn>
@@ -236,7 +252,7 @@
       <isInsertLogical>false</isInsertLogical>
     </insert-fact-column52>
     <org.drools.workbench.models.guided.dtable.shared.model.BRLActionColumn>
-      <hideColumn>true</hideColumn>
+      <hideColumn>false</hideColumn>
       <width>-1</width>
       <header>Add Alert</header>
       <definition>
@@ -246,7 +262,7 @@
       </definition>
       <childColumns>
         <org.drools.workbench.models.guided.dtable.shared.model.BRLActionVariableColumn>
-          <hideColumn>true</hideColumn>
+          <hideColumn>false</hideColumn>
           <width>100</width>
           <header>Add Alert</header>
           <varName></varName>
@@ -255,7 +271,7 @@
       </childColumns>
     </org.drools.workbench.models.guided.dtable.shared.model.BRLActionColumn>
     <org.drools.workbench.models.guided.dtable.shared.model.BRLActionColumn>
-      <hideColumn>true</hideColumn>
+      <hideColumn>false</hideColumn>
       <width>-1</width>
       <header>log</header>
       <definition>
@@ -265,7 +281,7 @@
       </definition>
       <childColumns>
         <org.drools.workbench.models.guided.dtable.shared.model.BRLActionVariableColumn>
-          <hideColumn>true</hideColumn>
+          <hideColumn>false</hideColumn>
           <width>100</width>
           <header>log</header>
           <varName></varName>
@@ -321,33 +337,39 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
+        <valueBoolean>true</valueBoolean>
+        <valueString></valueString>
+        <dataType>BOOLEAN</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueBoolean>true</valueBoolean>
+        <valueString></valueString>
+        <dataType>BOOLEAN</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueBoolean>true</valueBoolean>
+        <valueString></valueString>
+        <dataType>BOOLEAN</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueBoolean>true</valueBoolean>
+        <valueString></valueString>
+        <dataType>BOOLEAN</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
         <valueNumeric class="double">10.0</valueNumeric>
         <valueString></valueString>
         <dataType>NUMERIC_DOUBLE</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueBoolean>true</valueBoolean>
+        <valueNumeric class="double">20.0</valueNumeric>
         <valueString></valueString>
-        <dataType>BOOLEAN</dataType>
-        <isOtherwise>false</isOtherwise>
-      </value>
-      <value>
-        <valueBoolean>true</valueBoolean>
-        <valueString></valueString>
-        <dataType>BOOLEAN</dataType>
-        <isOtherwise>false</isOtherwise>
-      </value>
-      <value>
-        <valueBoolean>true</valueBoolean>
-        <valueString></valueString>
-        <dataType>BOOLEAN</dataType>
-        <isOtherwise>false</isOtherwise>
-      </value>
-      <value>
-        <valueBoolean>true</valueBoolean>
-        <valueString></valueString>
-        <dataType>BOOLEAN</dataType>
+        <dataType>NUMERIC_DOUBLE</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
@@ -372,7 +394,7 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>too hot: meat may spoil!</valueString>
+        <valueString>hot: meat may spoil!</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
@@ -407,38 +429,44 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>Vegetables</valueString>
+        <valueString>Meat</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueNumeric class="double">15.0</valueNumeric>
+        <valueBoolean>true</valueBoolean>
+        <valueString></valueString>
+        <dataType>BOOLEAN</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueBoolean>true</valueBoolean>
+        <valueString></valueString>
+        <dataType>BOOLEAN</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueBoolean>true</valueBoolean>
+        <valueString></valueString>
+        <dataType>BOOLEAN</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueBoolean>true</valueBoolean>
+        <valueString></valueString>
+        <dataType>BOOLEAN</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueNumeric class="double">20.0</valueNumeric>
         <valueString></valueString>
         <dataType>NUMERIC_DOUBLE</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueBoolean>true</valueBoolean>
+        <valueNumeric class="double">30.0</valueNumeric>
         <valueString></valueString>
-        <dataType>BOOLEAN</dataType>
-        <isOtherwise>false</isOtherwise>
-      </value>
-      <value>
-        <valueBoolean>true</valueBoolean>
-        <valueString></valueString>
-        <dataType>BOOLEAN</dataType>
-        <isOtherwise>false</isOtherwise>
-      </value>
-      <value>
-        <valueBoolean>true</valueBoolean>
-        <valueString></valueString>
-        <dataType>BOOLEAN</dataType>
-        <isOtherwise>false</isOtherwise>
-      </value>
-      <value>
-        <valueBoolean>true</valueBoolean>
-        <valueString></valueString>
-        <dataType>BOOLEAN</dataType>
+        <dataType>NUMERIC_DOUBLE</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
@@ -447,7 +475,7 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>1</valueString>
+        <valueString>0</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
@@ -458,12 +486,12 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>1</valueString>
+        <valueString>2</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>too hot: vegetables may spoil!</valueString>
+        <valueString>too hot: meat is spoiling!</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
@@ -498,38 +526,44 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>Non Perishable</valueString>
+        <valueString>Vegetables</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueNumeric class="double">20.0</valueNumeric>
+        <valueBoolean>true</valueBoolean>
+        <valueString></valueString>
+        <dataType>BOOLEAN</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueBoolean>true</valueBoolean>
+        <valueString></valueString>
+        <dataType>BOOLEAN</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueBoolean>true</valueBoolean>
+        <valueString></valueString>
+        <dataType>BOOLEAN</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueBoolean>true</valueBoolean>
+        <valueString></valueString>
+        <dataType>BOOLEAN</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueNumeric class="double">15.0</valueNumeric>
         <valueString></valueString>
         <dataType>NUMERIC_DOUBLE</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueBoolean>true</valueBoolean>
+        <valueNumeric class="double">30.0</valueNumeric>
         <valueString></valueString>
-        <dataType>BOOLEAN</dataType>
-        <isOtherwise>false</isOtherwise>
-      </value>
-      <value>
-        <valueBoolean>true</valueBoolean>
-        <valueString></valueString>
-        <dataType>BOOLEAN</dataType>
-        <isOtherwise>false</isOtherwise>
-      </value>
-      <value>
-        <valueBoolean>true</valueBoolean>
-        <valueString></valueString>
-        <dataType>BOOLEAN</dataType>
-        <isOtherwise>false</isOtherwise>
-      </value>
-      <value>
-        <valueBoolean>true</valueBoolean>
-        <valueString></valueString>
-        <dataType>BOOLEAN</dataType>
+        <dataType>NUMERIC_DOUBLE</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
@@ -538,7 +572,7 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>2</valueString>
+        <valueString>1</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
@@ -554,7 +588,7 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>too hot: non perishable food may spool!</valueString>
+        <valueString>hot: vegetables may spoil!</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
@@ -589,20 +623,105 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>Drinks</valueString>
+        <valueString>Non Perishable</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueNumeric class="double">25.0</valueNumeric>
+        <valueBoolean>true</valueBoolean>
+        <valueString></valueString>
+        <dataType>BOOLEAN</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueBoolean>true</valueBoolean>
+        <valueString></valueString>
+        <dataType>BOOLEAN</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueBoolean>true</valueBoolean>
+        <valueString></valueString>
+        <dataType>BOOLEAN</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueBoolean>true</valueBoolean>
+        <valueString></valueString>
+        <dataType>BOOLEAN</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueNumeric class="double">35.0</valueNumeric>
         <valueString></valueString>
         <dataType>NUMERIC_DOUBLE</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
+        <valueNumeric class="double">45.0</valueNumeric>
+        <valueString></valueString>
+        <dataType>NUMERIC_DOUBLE</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueString>$foodId</valueString>
+        <dataType>STRING</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueString>2</valueString>
+        <dataType>STRING</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
         <valueBoolean>true</valueBoolean>
         <valueString></valueString>
         <dataType>BOOLEAN</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueString>1</valueString>
+        <dataType>STRING</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueString>hot: non perishable food may spool!</valueString>
+        <dataType>STRING</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueString>0</valueString>
+        <dataType>STRING</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueString>0</valueString>
+        <dataType>STRING</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueBoolean>true</valueBoolean>
+        <valueString></valueString>
+        <dataType>BOOLEAN</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueBoolean>true</valueBoolean>
+        <valueString></valueString>
+        <dataType>BOOLEAN</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+    </list>
+    <list>
+      <value>
+        <valueNumeric class="int">5</valueNumeric>
+        <valueString></valueString>
+        <dataType>NUMERIC_INTEGER</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueString>Drinks</valueString>
+        <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
@@ -621,6 +740,24 @@
         <valueBoolean>true</valueBoolean>
         <valueString></valueString>
         <dataType>BOOLEAN</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueBoolean>true</valueBoolean>
+        <valueString></valueString>
+        <dataType>BOOLEAN</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueNumeric class="double">20.0</valueNumeric>
+        <valueString></valueString>
+        <dataType>NUMERIC_DOUBLE</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueNumeric class="double">30.0</valueNumeric>
+        <valueString></valueString>
+        <dataType>NUMERIC_DOUBLE</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
@@ -645,7 +782,7 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>too hot: drinks may spoil!</valueString>
+        <valueString>hot: drinks may spoil!</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
