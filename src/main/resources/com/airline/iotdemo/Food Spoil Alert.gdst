@@ -276,7 +276,8 @@
       <header>log</header>
       <definition>
         <org.drools.workbench.models.datamodel.rule.FreeFormLine>
-          <text>System.out.println(&quot;===&gt; IoT Demo: firing rule &quot;+drools.getRule().getName());</text>
+          <text>System.out.println(&quot;===&gt; IoT Demo: firing rule &quot;+drools.getRule().getName());
+          $cart.setRulesFired($cart.getRulesFired()+&quot; &quot;+drools.getRule().getName());</text>
         </org.drools.workbench.models.datamodel.rule.FreeFormLine>
       </definition>
       <childColumns>
